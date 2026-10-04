@@ -1,14 +1,4 @@
-/* =========================================================
-   AIKO.DEV — PERSONAL PORTFOLIO
-   SCRIPT.JS
-   FINAL FIXED VERSION
-========================================================= */
-
 "use strict";
-
-/* =========================================================
-   0. GLOBAL ERROR SAFETY
-========================================================= */
 
 window.addEventListener("error", function (event) {
 
@@ -16,11 +6,6 @@ window.addEventListener("error", function (event) {
         "AIKO.DEV JavaScript Error:",
         event.error || event.message
     );
-
-    /*
-       Jika terjadi error pada JavaScript,
-       pastikan konten .reveal tetap terlihat.
-    */
 
     document.querySelectorAll(".reveal").forEach(
         function (element) {
@@ -31,7 +16,6 @@ window.addEventListener("error", function (event) {
     );
 
 });
-
 
 window.addEventListener(
     "unhandledrejection",
@@ -45,18 +29,9 @@ window.addEventListener(
     }
 );
 
-
-/* =========================================================
-   1. DOM CONTENT LOADED
-========================================================= */
-
 document.addEventListener(
     "DOMContentLoaded",
     function () {
-
-        /* =================================================
-           INITIALIZATION
-        ================================================= */
 
         const loader =
             document.getElementById("loader");
@@ -88,58 +63,45 @@ document.addEventListener(
         const year =
             document.getElementById("year");
 
-
         const mobileLinks =
             document.querySelectorAll(
                 ".mobile-link"
             );
-
 
         const navLinks =
             document.querySelectorAll(
                 ".nav-link"
             );
 
-
         const sections =
             document.querySelectorAll(
                 "main section[id]"
             );
-
 
         const revealElements =
             document.querySelectorAll(
                 ".reveal"
             );
 
-
         const statNumbers =
             document.querySelectorAll(
                 "[data-count]"
             );
-
 
         const filterButtons =
             document.querySelectorAll(
                 ".filter-btn"
             );
 
-
         const projectCards =
             document.querySelectorAll(
                 ".project-card"
             );
 
-
         const progressBars =
             document.querySelectorAll(
                 ".progress span"
             );
-
-
-        /* =================================================
-           2. REVEAL SAFETY
-        ================================================= */
 
         function revealAllContent() {
 
@@ -157,22 +119,10 @@ document.addEventListener(
 
         }
 
-
-        /*
-           Fallback.
-           Jika observer gagal atau browser mengalami
-           masalah, seluruh konten tetap ditampilkan.
-        */
-
         window.setTimeout(
             revealAllContent,
             1800
         );
-
-
-        /* =================================================
-           3. LOADING SCREEN
-        ================================================= */
 
         function hideLoader() {
 
@@ -198,7 +148,6 @@ document.addEventListener(
 
         }
 
-
         window.addEventListener(
             "load",
             function () {
@@ -211,20 +160,10 @@ document.addEventListener(
             }
         );
 
-
-        /*
-           Emergency loader fallback.
-        */
-
         window.setTimeout(
             hideLoader,
             2500
         );
-
-
-        /* =================================================
-           4. MOBILE MENU
-        ================================================= */
 
         function closeMobileMenu() {
 
@@ -236,19 +175,16 @@ document.addEventListener(
 
             }
 
-
             if (menuBtn) {
 
                 menuBtn.classList.remove(
                     "open"
                 );
 
-
                 menuBtn.setAttribute(
                     "aria-expanded",
                     "false"
                 );
-
 
                 menuBtn.setAttribute(
                     "aria-label",
@@ -259,7 +195,6 @@ document.addEventListener(
 
         }
 
-
         function openMobileMenu() {
 
             if (
@@ -269,22 +204,18 @@ document.addEventListener(
                 return;
             }
 
-
             mobileNav.classList.add(
                 "open"
             );
-
 
             menuBtn.classList.add(
                 "open"
             );
 
-
             menuBtn.setAttribute(
                 "aria-expanded",
                 "true"
             );
-
 
             menuBtn.setAttribute(
                 "aria-label",
@@ -292,7 +223,6 @@ document.addEventListener(
             );
 
         }
-
 
         if (
             menuBtn &&
@@ -305,12 +235,10 @@ document.addEventListener(
 
                     event.stopPropagation();
 
-
                     const isOpen =
                         mobileNav.classList.contains(
                             "open"
                         );
-
 
                     if (isOpen) {
 
@@ -327,7 +255,6 @@ document.addEventListener(
 
         }
 
-
         mobileLinks.forEach(
             function (link) {
 
@@ -343,7 +270,6 @@ document.addEventListener(
             }
         );
 
-
         document.addEventListener(
             "click",
             function (event) {
@@ -355,10 +281,8 @@ document.addEventListener(
                     return;
                 }
 
-
                 const target =
                     event.target;
-
 
                 if (
                     !(target instanceof Node)
@@ -366,18 +290,15 @@ document.addEventListener(
                     return;
                 }
 
-
                 const insideMenu =
                     mobileNav.contains(
                         target
                     );
 
-
                 const insideButton =
                     menuBtn.contains(
                         target
                     );
-
 
                 if (
                     !insideMenu &&
@@ -390,7 +311,6 @@ document.addEventListener(
 
             }
         );
-
 
         document.addEventListener(
             "keydown",
@@ -407,7 +327,6 @@ document.addEventListener(
             }
         );
 
-
         window.addEventListener(
             "resize",
             function () {
@@ -422,11 +341,6 @@ document.addEventListener(
 
             }
         );
-
-
-        /* =================================================
-           5. THEME SYSTEM
-        ================================================= */
 
         function getSavedTheme() {
 
@@ -448,7 +362,6 @@ document.addEventListener(
 
         }
 
-
         function setSavedTheme(theme) {
 
             try {
@@ -468,31 +381,26 @@ document.addEventListener(
 
         }
 
-
         function updateThemeButton() {
 
             if (!themeBtn) {
                 return;
             }
 
-
             const isLight =
                 document.body.classList.contains(
                     "light-mode"
                 );
-
 
             if (isLight) {
 
                 themeBtn.textContent =
                     "🌙";
 
-
                 themeBtn.setAttribute(
                     "aria-label",
                     "Aktifkan mode gelap"
                 );
-
 
                 themeBtn.setAttribute(
                     "title",
@@ -504,12 +412,10 @@ document.addEventListener(
                 themeBtn.textContent =
                     "☀️";
 
-
                 themeBtn.setAttribute(
                     "aria-label",
                     "Aktifkan mode terang"
                 );
-
 
                 themeBtn.setAttribute(
                     "title",
@@ -520,10 +426,8 @@ document.addEventListener(
 
         }
 
-
         const savedTheme =
             getSavedTheme();
-
 
         if (
             savedTheme === "light"
@@ -535,9 +439,7 @@ document.addEventListener(
 
         }
 
-
         updateThemeButton();
-
 
         if (themeBtn) {
 
@@ -550,16 +452,13 @@ document.addEventListener(
                             "light-mode"
                         );
 
-
                     setSavedTheme(
                         isLight
                             ? "light"
                             : "dark"
                     );
 
-
                     updateThemeButton();
-
 
                     showToast(
                         isLight
@@ -571,11 +470,6 @@ document.addEventListener(
             );
 
         }
-
-
-        /* =================================================
-           6. TYPING ANIMATION
-        ================================================= */
 
         const typingWords = [
 
@@ -589,7 +483,6 @@ document.addEventListener(
 
         ];
 
-
         let wordIndex = 0;
 
         let characterIndex = 0;
@@ -598,13 +491,11 @@ document.addEventListener(
 
         let typingTimer = null;
 
-
         function runTypingAnimation() {
 
             if (!typingText) {
                 return;
             }
-
 
             if (
                 !typingWords.length
@@ -612,22 +503,18 @@ document.addEventListener(
                 return;
             }
 
-
             const currentWord =
                 typingWords[wordIndex];
-
 
             if (!deleting) {
 
                 characterIndex += 1;
-
 
                 typingText.textContent =
                     currentWord.substring(
                         0,
                         characterIndex
                     );
-
 
                 if (
                     characterIndex >=
@@ -636,13 +523,11 @@ document.addEventListener(
 
                     deleting = true;
 
-
                     typingTimer =
                         window.setTimeout(
                             runTypingAnimation,
                             1400
                         );
-
 
                     return;
 
@@ -651,7 +536,6 @@ document.addEventListener(
             } else {
 
                 characterIndex -= 1;
-
 
                 typingText.textContent =
                     currentWord.substring(
@@ -662,7 +546,6 @@ document.addEventListener(
                         )
                     );
 
-
                 if (
                     characterIndex <= 0
                 ) {
@@ -672,7 +555,6 @@ document.addEventListener(
                     deleting = false;
 
                     wordIndex += 1;
-
 
                     if (
                         wordIndex >=
@@ -687,12 +569,10 @@ document.addEventListener(
 
             }
 
-
             const speed =
                 deleting
                     ? 45
                     : 85;
-
 
             typingTimer =
                 window.setTimeout(
@@ -701,7 +581,6 @@ document.addEventListener(
                 );
 
         }
-
 
         if (typingText) {
 
@@ -713,13 +592,7 @@ document.addEventListener(
 
         }
 
-
-        /* =================================================
-           7. TOAST NOTIFICATION
-        ================================================= */
-
         let toastTimer = null;
-
 
         function showToast(message) {
 
@@ -727,15 +600,12 @@ document.addEventListener(
                 return;
             }
 
-
             toast.textContent =
                 message;
-
 
             toast.classList.add(
                 "show"
             );
-
 
             if (toastTimer) {
 
@@ -744,7 +614,6 @@ document.addEventListener(
                 );
 
             }
-
 
             toastTimer =
                 window.setTimeout(
@@ -760,16 +629,10 @@ document.addEventListener(
 
         }
 
-
-        /* =================================================
-           8. HEADER + BACK TO TOP
-        ================================================= */
-
         function handleScroll() {
 
             const scrollPosition =
                 window.scrollY;
-
 
             if (header) {
 
@@ -779,7 +642,6 @@ document.addEventListener(
                 );
 
             }
-
 
             if (backTop) {
 
@@ -792,7 +654,6 @@ document.addEventListener(
 
         }
 
-
         window.addEventListener(
             "scroll",
             handleScroll,
@@ -801,9 +662,7 @@ document.addEventListener(
             }
         );
 
-
         handleScroll();
-
 
         if (backTop) {
 
@@ -824,11 +683,6 @@ document.addEventListener(
 
         }
 
-
-        /* =================================================
-           9. ACTIVE NAVIGATION
-        ================================================= */
-
         function updateActiveNavigation() {
 
             if (
@@ -837,16 +691,13 @@ document.addEventListener(
                 return;
             }
 
-
             const marker =
                 window.scrollY + 180;
-
 
             let activeId =
                 sections[0]
                     ? sections[0].id
                     : "home";
-
 
             sections.forEach(
                 function (section) {
@@ -854,11 +705,9 @@ document.addEventListener(
                     const top =
                         section.offsetTop;
 
-
                     const bottom =
                         top +
                         section.offsetHeight;
-
 
                     if (
                         marker >= top &&
@@ -873,7 +722,6 @@ document.addEventListener(
                 }
             );
 
-
             navLinks.forEach(
                 function (link) {
 
@@ -881,7 +729,6 @@ document.addEventListener(
                         link.getAttribute(
                             "href"
                         );
-
 
                     link.classList.toggle(
                         "active",
@@ -894,7 +741,6 @@ document.addEventListener(
 
         }
 
-
         window.addEventListener(
             "scroll",
             updateActiveNavigation,
@@ -903,25 +749,17 @@ document.addEventListener(
             }
         );
 
-
         window.addEventListener(
             "resize",
             updateActiveNavigation
         );
 
-
         updateActiveNavigation();
-
-
-        /* =================================================
-           10. SCROLL PROGRESS BAR
-        ================================================= */
 
         let scrollProgress =
             document.getElementById(
                 "scrollProgress"
             );
-
 
         if (!scrollProgress) {
 
@@ -930,52 +768,40 @@ document.addEventListener(
                     "div"
                 );
 
-
             scrollProgress.id =
                 "scrollProgress";
-
 
             scrollProgress.setAttribute(
                 "aria-hidden",
                 "true"
             );
 
-
             scrollProgress.style.position =
                 "fixed";
-
 
             scrollProgress.style.top =
                 "0";
 
-
             scrollProgress.style.left =
                 "0";
-
 
             scrollProgress.style.width =
                 "0%";
 
-
             scrollProgress.style.height =
                 "3px";
-
 
             scrollProgress.style.zIndex =
                 "10001";
 
-
             scrollProgress.style.pointerEvents =
                 "none";
-
 
             scrollProgress.style.background =
                 "linear-gradient(90deg, #60a5fa, #a78bfa, #22d3ee)";
 
-
             scrollProgress.style.transformOrigin =
                 "left center";
-
 
             document.body.appendChild(
                 scrollProgress
@@ -983,23 +809,19 @@ document.addEventListener(
 
         }
 
-
         function updateScrollProgress() {
 
             if (!scrollProgress) {
                 return;
             }
 
-
             const scrollTop =
                 window.scrollY;
-
 
             const scrollable =
                 document.documentElement
                     .scrollHeight -
                 window.innerHeight;
-
 
             if (
                 scrollable <= 0
@@ -1011,7 +833,6 @@ document.addEventListener(
                 return;
 
             }
-
 
             const progress =
                 Math.min(
@@ -1025,12 +846,10 @@ document.addEventListener(
                     100
                 );
 
-
             scrollProgress.style.width =
                 progress + "%";
 
         }
-
 
         window.addEventListener(
             "scroll",
@@ -1040,35 +859,12 @@ document.addEventListener(
             }
         );
 
-
         window.addEventListener(
             "resize",
             updateScrollProgress
         );
 
-
         updateScrollProgress();
-
-
-        /* =================================================
-           11. REVEAL ANIMATION — FIXED
-        ================================================= */
-
-        /*
-           PENTING:
-
-           CSS portfolio menggunakan:
-
-           .reveal.active
-
-           BUKAN:
-
-           .reveal.visible
-
-           Jadi JavaScript harus menambahkan
-           class "active".
-        */
-
 
         function activateReveal(
             element
@@ -1078,23 +874,15 @@ document.addEventListener(
                 return;
             }
 
-
             element.classList.add(
                 "active"
             );
-
-
-            /*
-               Jika CSS lama menggunakan visible,
-               kita juga tambahkan visible agar kompatibel.
-            */
 
             element.classList.add(
                 "visible"
             );
 
         }
-
 
         if (
             "IntersectionObserver" in window
@@ -1113,11 +901,9 @@ document.addEventListener(
                                     return;
                                 }
 
-
                                 activateReveal(
                                     entry.target
                                 );
-
 
                                 revealObserver.unobserve(
                                     entry.target
@@ -1135,7 +921,6 @@ document.addEventListener(
                     }
                 );
 
-
             revealElements.forEach(
                 function (element) {
 
@@ -1145,7 +930,6 @@ document.addEventListener(
 
                 }
             );
-
 
         } else {
 
@@ -1160,12 +944,6 @@ document.addEventListener(
             );
 
         }
-
-
-        /*
-           Safety fallback.
-           Konten TIDAK boleh tetap tersembunyi.
-        */
 
         window.setTimeout(
             function () {
@@ -1184,11 +962,6 @@ document.addEventListener(
             1800
         );
 
-
-        /* =================================================
-           12. NUMBER COUNTER
-        ================================================= */
-
         function animateNumber(
             element
         ) {
@@ -1197,14 +970,12 @@ document.addEventListener(
                 return;
             }
 
-
             const target =
                 Number(
                     element.getAttribute(
                         "data-count"
                     )
                 );
-
 
             if (
                 !Number.isFinite(target)
@@ -1217,7 +988,6 @@ document.addEventListener(
 
             }
 
-
             if (
                 target <= 0
             ) {
@@ -1229,14 +999,11 @@ document.addEventListener(
 
             }
 
-
             const duration =
                 1000;
 
-
             const start =
                 performance.now();
-
 
             function updateNumber(
                 now
@@ -1245,7 +1012,6 @@ document.addEventListener(
                 const elapsed =
                     now - start;
 
-
                 const progress =
                     Math.min(
                         elapsed /
@@ -1253,17 +1019,14 @@ document.addEventListener(
                         1
                     );
 
-
                 const value =
                     Math.floor(
                         progress *
                         target
                     );
 
-
                 element.textContent =
                     String(value);
-
 
                 if (
                     progress < 1
@@ -1282,13 +1045,11 @@ document.addEventListener(
 
             }
 
-
             window.requestAnimationFrame(
                 updateNumber
             );
 
         }
-
 
         if (
             "IntersectionObserver" in window
@@ -1307,11 +1068,9 @@ document.addEventListener(
                                     return;
                                 }
 
-
                                 animateNumber(
                                     entry.target
                                 );
-
 
                                 statObserver.unobserve(
                                     entry.target
@@ -1326,7 +1085,6 @@ document.addEventListener(
                     }
                 );
 
-
             statNumbers.forEach(
                 function (number) {
 
@@ -1336,7 +1094,6 @@ document.addEventListener(
 
                 }
             );
-
 
         } else {
 
@@ -1348,7 +1105,6 @@ document.addEventListener(
                             "data-count"
                         );
 
-
                     number.textContent =
                         target || "0";
 
@@ -1356,11 +1112,6 @@ document.addEventListener(
             );
 
         }
-
-
-        /* =================================================
-           13. PROJECT FILTER
-        ================================================= */
 
         function applyProjectFilter(
             filter
@@ -1374,19 +1125,16 @@ document.addEventListener(
                             "data-category"
                         ) || "";
 
-
                     const categories =
                         categoryText
                             .toLowerCase()
                             .split(/\s+/)
                             .filter(Boolean);
 
-
                     const selectedFilter =
                         String(
                             filter || "all"
                         ).toLowerCase();
-
 
                     const shouldShow =
                         selectedFilter === "all" ||
@@ -1394,12 +1142,10 @@ document.addEventListener(
                             selectedFilter
                         );
 
-
                     card.classList.toggle(
                         "hidden",
                         !shouldShow
                     );
-
 
                     card.setAttribute(
                         "aria-hidden",
@@ -1412,7 +1158,6 @@ document.addEventListener(
             );
 
         }
-
 
         filterButtons.forEach(
             function (button) {
@@ -1431,17 +1176,14 @@ document.addEventListener(
                             }
                         );
 
-
                         button.classList.add(
                             "active"
                         );
-
 
                         const filter =
                             button.getAttribute(
                                 "data-filter"
                             ) || "all";
-
 
                         applyProjectFilter(
                             filter
@@ -1453,15 +1195,9 @@ document.addEventListener(
             }
         );
 
-
         applyProjectFilter(
             "all"
         );
-
-
-        /* =================================================
-           14. SKILL PROGRESS
-        ================================================= */
 
         function setProgress(
             bar
@@ -1471,14 +1207,12 @@ document.addEventListener(
                 return;
             }
 
-
             const value =
                 Number(
                     bar.getAttribute(
                         "data-progress"
                     )
                 );
-
 
             const safeValue =
                 Number.isFinite(value)
@@ -1491,12 +1225,10 @@ document.addEventListener(
                     )
                     : 0;
 
-
             bar.style.width =
                 safeValue + "%";
 
         }
-
 
         if (
             "IntersectionObserver" in window
@@ -1515,11 +1247,9 @@ document.addEventListener(
                                     return;
                                 }
 
-
                                 setProgress(
                                     entry.target
                                 );
-
 
                                 skillObserver.unobserve(
                                     entry.target
@@ -1534,7 +1264,6 @@ document.addEventListener(
                     }
                 );
 
-
             progressBars.forEach(
                 function (bar) {
 
@@ -1544,7 +1273,6 @@ document.addEventListener(
 
                 }
             );
-
 
         } else {
 
@@ -1559,11 +1287,6 @@ document.addEventListener(
             );
 
         }
-
-
-        /*
-           Skill fallback.
-        */
 
         window.setTimeout(
             function () {
@@ -1582,11 +1305,6 @@ document.addEventListener(
             1500
         );
 
-
-        /* =================================================
-           15. CONTACT FORM → GMAIL
-        ================================================= */
-
         if (contactForm) {
 
             contactForm.addEventListener(
@@ -1595,54 +1313,45 @@ document.addEventListener(
 
                     event.preventDefault();
 
-
                     const nameInput =
                         document.getElementById(
                             "name"
                         );
-
 
                     const emailInput =
                         document.getElementById(
                             "email"
                         );
 
-
                     const subjectInput =
                         document.getElementById(
                             "subject"
                         );
-
 
                     const messageInput =
                         document.getElementById(
                             "message"
                         );
 
-
                     const name =
                         nameInput
                             ? nameInput.value.trim()
                             : "";
-
 
                     const email =
                         emailInput
                             ? emailInput.value.trim()
                             : "";
 
-
                     const subject =
                         subjectInput
                             ? subjectInput.value.trim()
                             : "";
 
-
                     const message =
                         messageInput
                             ? messageInput.value.trim()
                             : "";
-
 
                     if (
                         !name ||
@@ -1659,7 +1368,6 @@ document.addEventListener(
 
                     }
 
-
                     if (
                         emailInput &&
                         !emailInput.checkValidity()
@@ -1669,14 +1377,11 @@ document.addEventListener(
                             "Masukkan alamat email yang valid."
                         );
 
-
                         emailInput.focus();
-
 
                         return;
 
                     }
-
 
                     const emailBody =
                         [
@@ -1691,7 +1396,6 @@ document.addEventListener(
                             "\n"
                         );
 
-
                     const gmailURL =
                         "https://mail.google.com/mail/?" +
                         "view=cm&fs=1" +
@@ -1705,10 +1409,8 @@ document.addEventListener(
                             emailBody
                         );
 
-
                     let gmailWindow =
                         null;
-
 
                     try {
 
@@ -1728,7 +1430,6 @@ document.addEventListener(
 
                     }
 
-
                     if (!gmailWindow) {
 
                         window.location.href =
@@ -1744,11 +1445,9 @@ document.addEventListener(
 
                     }
 
-
                     showToast(
                         "Gmail sedang dibuka ✉️"
                     );
-
 
                     contactForm.reset();
 
@@ -1757,16 +1456,10 @@ document.addEventListener(
 
         }
 
-
-        /* =================================================
-           16. SMOOTH SCROLL
-        ================================================= */
-
         const anchorLinks =
             document.querySelectorAll(
                 'a[href^="#"]'
             );
-
 
         anchorLinks.forEach(
             function (link) {
@@ -1780,7 +1473,6 @@ document.addEventListener(
                                 "href"
                             );
 
-
                         if (
                             !href ||
                             href === "#"
@@ -1790,10 +1482,8 @@ document.addEventListener(
 
                         }
 
-
                         let target =
                             null;
-
 
                         try {
 
@@ -1808,14 +1498,11 @@ document.addEventListener(
 
                         }
 
-
                         if (!target) {
                             return;
                         }
 
-
                         event.preventDefault();
-
 
                         target.scrollIntoView({
 
@@ -1833,11 +1520,6 @@ document.addEventListener(
             }
         );
 
-
-        /* =================================================
-           17. IMAGE ERROR HANDLING
-        ================================================= */
-
         document
             .querySelectorAll("img")
             .forEach(
@@ -1851,17 +1533,10 @@ document.addEventListener(
                                 "image-error"
                             );
 
-
                             image.setAttribute(
                                 "alt",
                                 "Gambar tidak dapat dimuat"
                             );
-
-
-                            /*
-                               Jangan sembunyikan gambar
-                               atau menghentikan JS.
-                            */
 
                             console.warn(
                                 "Image failed to load:",
@@ -1870,7 +1545,6 @@ document.addEventListener(
 
                         }
                     );
-
 
                     if (
                         image.complete &&
@@ -1886,20 +1560,13 @@ document.addEventListener(
                 }
             );
 
-
-        /* =================================================
-           18. PHOTO CARD POINTER EFFECT
-        ================================================= */
-
         const photoCard =
             document.querySelector(
                 ".photo-card"
             );
 
-
         let canHover =
             false;
-
 
         try {
 
@@ -1915,7 +1582,6 @@ document.addEventListener(
 
         }
 
-
         if (
             photoCard &&
             canHover
@@ -1928,7 +1594,6 @@ document.addEventListener(
                     const rect =
                         photoCard.getBoundingClientRect();
 
-
                     if (
                         rect.width <= 0 ||
                         rect.height <= 0
@@ -1938,16 +1603,13 @@ document.addEventListener(
 
                     }
 
-
                     const x =
                         event.clientX -
                         rect.left;
 
-
                     const y =
                         event.clientY -
                         rect.top;
-
 
                     const rotateX =
                         (
@@ -1959,7 +1621,6 @@ document.addEventListener(
                         ) *
                         -3;
 
-
                     const rotateY =
                         (
                             (
@@ -1969,7 +1630,6 @@ document.addEventListener(
                             (rect.width / 2)
                         ) *
                         3;
-
 
                     photoCard.style.transform =
                         "rotate(0deg) " +
@@ -1984,7 +1644,6 @@ document.addEventListener(
                 }
             );
 
-
             photoCard.addEventListener(
                 "pointerleave",
                 function () {
@@ -1997,11 +1656,6 @@ document.addEventListener(
 
         }
 
-
-        /* =================================================
-           19. PROJECT CARD POINTER EFFECT
-        ================================================= */
-
         projectCards.forEach(
             function (card) {
 
@@ -2013,10 +1667,8 @@ document.addEventListener(
                             return;
                         }
 
-
                         const rect =
                             card.getBoundingClientRect();
-
 
                         if (
                             rect.width <= 0 ||
@@ -2027,16 +1679,13 @@ document.addEventListener(
 
                         }
 
-
                         const x =
                             event.clientX -
                             rect.left;
 
-
                         const y =
                             event.clientY -
                             rect.top;
-
 
                         const rotateX =
                             (
@@ -2048,7 +1697,6 @@ document.addEventListener(
                             ) *
                             -1.5;
 
-
                         const rotateY =
                             (
                                 (
@@ -2059,18 +1707,15 @@ document.addEventListener(
                             ) *
                             1.5;
 
-
                         card.style.setProperty(
                             "--card-rotate-x",
                             rotateX + "deg"
                         );
 
-
                         card.style.setProperty(
                             "--card-rotate-y",
                             rotateY + "deg"
                         );
-
 
                         card.classList.add(
                             "pointer-active"
@@ -2078,7 +1723,6 @@ document.addEventListener(
 
                     }
                 );
-
 
                 card.addEventListener(
                     "pointerleave",
@@ -2089,12 +1733,10 @@ document.addEventListener(
                             "0deg"
                         );
 
-
                         card.style.setProperty(
                             "--card-rotate-y",
                             "0deg"
                         );
-
 
                         card.classList.remove(
                             "pointer-active"
@@ -2105,11 +1747,6 @@ document.addEventListener(
 
             }
         );
-
-
-        /* =================================================
-           20. KEYBOARD ACCESSIBILITY
-        ================================================= */
 
         document.addEventListener(
             "keydown",
@@ -2128,11 +1765,6 @@ document.addEventListener(
             }
         );
 
-
-        /* =================================================
-           21. CURRENT YEAR
-        ================================================= */
-
         if (year) {
 
             year.textContent =
@@ -2141,11 +1773,6 @@ document.addEventListener(
                 );
 
         }
-
-
-        /* =================================================
-           22. EXTERNAL LINK SAFETY
-        ================================================= */
 
         document
             .querySelectorAll(
@@ -2163,7 +1790,6 @@ document.addEventListener(
                             .split(/\s+/)
                             .filter(Boolean);
 
-
                     if (
                         !rel.includes(
                             "noopener"
@@ -2176,7 +1802,6 @@ document.addEventListener(
 
                     }
 
-
                     if (
                         !rel.includes(
                             "noreferrer"
@@ -2188,7 +1813,6 @@ document.addEventListener(
                         );
 
                     }
-
 
                     link.setAttribute(
                         "rel",
@@ -2197,16 +1821,6 @@ document.addEventListener(
 
                 }
             );
-
-
-        /* =================================================
-           23. FINAL SAFETY CHECK
-        ================================================= */
-
-        /*
-           Pastikan reveal tidak tertinggal
-           dalam keadaan tersembunyi.
-        */
 
         window.setTimeout(
             function () {
@@ -2237,35 +1851,25 @@ document.addEventListener(
             2500
         );
 
-
-        /* =================================================
-           24. FINAL CONSOLE
-        ================================================= */
-
         console.log(
             "========================================"
         );
-
 
         console.log(
             "AIKO.DEV Portfolio"
         );
 
-
         console.log(
             "Muhammad Aiko Anail Adi"
         );
-
 
         console.log(
             "HTML + CSS + JavaScript"
         );
 
-
         console.log(
             "JavaScript loaded successfully."
         );
-
 
         console.log(
             "========================================"

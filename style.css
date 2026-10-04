@@ -1,13 +1,3 @@
-/* =========================================================
-   AIKO.DEV — PERSONAL PORTFOLIO
-   STYLE.CSS
-========================================================= */
-
-
-/* =========================================================
-   1. ROOT / VARIABLES
-========================================================= */
-
 :root {
 
     --bg: #070b16;
@@ -43,11 +33,6 @@
 
 }
 
-
-/* =========================================================
-   2. LIGHT MODE
-========================================================= */
-
 body.light-mode {
 
     --bg: #f4f7fb;
@@ -69,11 +54,6 @@ body.light-mode {
 
 }
 
-
-/* =========================================================
-   3. RESET
-========================================================= */
-
 * {
 
     margin: 0;
@@ -84,7 +64,6 @@ body.light-mode {
 
 }
 
-
 html {
 
     scroll-behavior: smooth;
@@ -92,7 +71,6 @@ html {
     scroll-padding-top: 90px;
 
 }
-
 
 body {
 
@@ -119,7 +97,6 @@ body {
 
 }
 
-
 ::selection {
 
     background: var(--accent);
@@ -127,7 +104,6 @@ body {
     color: white;
 
 }
-
 
 a {
 
@@ -137,7 +113,6 @@ a {
 
 }
 
-
 button,
 input,
 textarea {
@@ -146,17 +121,11 @@ textarea {
 
 }
 
-
 button {
 
     cursor: pointer;
 
 }
-
-
-/* =========================================================
-   4. CONTAINER
-========================================================= */
 
 .container {
 
@@ -170,11 +139,6 @@ button {
 
 }
 
-
-/* =========================================================
-   5. SECTION
-========================================================= */
-
 .section {
 
     position: relative;
@@ -182,11 +146,6 @@ button {
     padding: 110px 0;
 
 }
-
-
-/* =========================================================
-   6. BACKGROUND GLOW
-========================================================= */
 
 .background-glow {
 
@@ -208,7 +167,6 @@ button {
 
 }
 
-
 .glow-one {
 
     top: 5%;
@@ -219,7 +177,6 @@ button {
 
 }
 
-
 .glow-two {
 
     right: -180px;
@@ -229,11 +186,6 @@ button {
     background: var(--accent-2);
 
 }
-
-
-/* =========================================================
-   7. LOADING SCREEN
-========================================================= */
 
 .loader {
 
@@ -259,7 +211,6 @@ button {
 
 }
 
-
 .loader.hide {
 
     opacity: 0;
@@ -267,7 +218,6 @@ button {
     visibility: hidden;
 
 }
-
 
 .loader-ring {
 
@@ -292,7 +242,6 @@ button {
 
 }
 
-
 .loader p {
 
     color: var(--muted);
@@ -302,7 +251,6 @@ button {
     letter-spacing: 1px;
 
 }
-
 
 @keyframes spin {
 
@@ -314,11 +262,6 @@ button {
     }
 
 }
-
-
-/* =========================================================
-   8. HEADER
-========================================================= */
 
 .header {
 
@@ -341,7 +284,6 @@ button {
 
 }
 
-
 .header.scrolled {
 
     background:
@@ -355,7 +297,6 @@ button {
 
 }
 
-
 body.light-mode
 .header.scrolled {
 
@@ -363,11 +304,6 @@ body.light-mode
         rgba(244, 247, 251, 0.82);
 
 }
-
-
-/* =========================================================
-   9. NAVBAR
-========================================================= */
 
 .navbar {
 
@@ -384,11 +320,6 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   10. LOGO
-========================================================= */
-
 .logo {
 
     font-size: 22px;
@@ -399,17 +330,11 @@ body.light-mode
 
 }
 
-
 .logo span {
 
     color: var(--accent);
 
 }
-
-
-/* =========================================================
-   11. DESKTOP NAV
-========================================================= */
 
 .desktop-nav {
 
@@ -420,7 +345,6 @@ body.light-mode
     gap: 7px;
 
 }
-
 
 .nav-link {
 
@@ -442,7 +366,6 @@ body.light-mode
 
 }
 
-
 .nav-link:hover {
 
     color: var(--text);
@@ -455,7 +378,6 @@ body.light-mode
 
 }
 
-
 .nav-link.active {
 
     color: var(--text);
@@ -464,11 +386,6 @@ body.light-mode
         rgba(96, 165, 250, 0.12);
 
 }
-
-
-/* =========================================================
-   12. NAV ACTIONS
-========================================================= */
 
 .nav-actions {
 
@@ -479,7 +396,6 @@ body.light-mode
     gap: 10px;
 
 }
-
 
 .theme-btn,
 .menu-btn {
@@ -509,7 +425,6 @@ body.light-mode
 
 }
 
-
 .theme-btn:hover,
 .menu-btn:hover {
 
@@ -521,17 +436,11 @@ body.light-mode
 
 }
 
-
 .theme-btn {
 
     font-size: 17px;
 
 }
-
-
-/* =========================================================
-   13. HAMBURGER
-========================================================= */
 
 .menu-btn {
 
@@ -540,7 +449,6 @@ body.light-mode
     gap: 4px;
 
 }
-
 
 .menu-btn span {
 
@@ -559,7 +467,6 @@ body.light-mode
 
 }
 
-
 .menu-btn.open span:nth-child(1) {
 
     transform:
@@ -568,13 +475,11 @@ body.light-mode
 
 }
 
-
 .menu-btn.open span:nth-child(2) {
 
     opacity: 0;
 
 }
-
 
 .menu-btn.open span:nth-child(3) {
 
@@ -584,21 +489,11 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   14. MOBILE NAV
-========================================================= */
-
 .mobile-nav {
 
     display: none;
 
 }
-
-
-/* =========================================================
-   15. HERO
-========================================================= */
 
 .hero {
 
@@ -612,7 +507,6 @@ body.light-mode
 
 }
 
-
 .hero-grid {
 
     display: grid;
@@ -625,11 +519,6 @@ body.light-mode
     gap: 80px;
 
 }
-
-
-/* =========================================================
-   16. HERO TEXT
-========================================================= */
 
 .eyebrow {
 
@@ -645,7 +534,6 @@ body.light-mode
     margin-bottom: 14px;
 
 }
-
 
 .hero h1 {
 
@@ -663,7 +551,6 @@ body.light-mode
     margin-bottom: 24px;
 
 }
-
 
 .hero h1 span {
 
@@ -686,7 +573,6 @@ body.light-mode
 
 }
 
-
 .typing-line {
 
     min-height: 31px;
@@ -699,13 +585,11 @@ body.light-mode
 
 }
 
-
 .typing-line strong {
 
     color: var(--text);
 
 }
-
 
 .cursor {
 
@@ -717,7 +601,6 @@ body.light-mode
 
 }
 
-
 @keyframes blink {
 
     50% {
@@ -727,7 +610,6 @@ body.light-mode
     }
 
 }
-
 
 .hero-description {
 
@@ -739,17 +621,11 @@ body.light-mode
 
 }
 
-
 .hero-description b {
 
     color: var(--text);
 
 }
-
-
-/* =========================================================
-   17. HERO BUTTON
-========================================================= */
 
 .hero-buttons {
 
@@ -763,7 +639,6 @@ body.light-mode
         30px 0 22px;
 
 }
-
 
 .btn {
 
@@ -797,14 +672,12 @@ body.light-mode
 
 }
 
-
 .btn:hover {
 
     transform:
         translateY(-3px);
 
 }
-
 
 .btn-primary {
 
@@ -830,7 +703,6 @@ body.light-mode
 
 }
 
-
 .btn-primary:hover {
 
     box-shadow:
@@ -844,7 +716,6 @@ body.light-mode
 
 }
 
-
 .btn-secondary {
 
     background:
@@ -855,11 +726,6 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   18. QUICK LINKS
-========================================================= */
-
 .quick-links {
 
     display: flex;
@@ -869,7 +735,6 @@ body.light-mode
     gap: 18px;
 
 }
-
 
 .quick-links a {
 
@@ -885,18 +750,12 @@ body.light-mode
 
 }
 
-
 .quick-links a:hover {
 
     color:
         var(--accent);
 
 }
-
-
-/* =========================================================
-   19. PROFILE PHOTO
-========================================================= */
 
 .hero-photo-wrap {
 
@@ -909,7 +768,6 @@ body.light-mode
     min-height: 560px;
 
 }
-
 
 .photo-card {
 
@@ -967,7 +825,6 @@ body.light-mode
 
 }
 
-
 .photo-card:hover {
 
     transform:
@@ -975,7 +832,6 @@ body.light-mode
         translateY(-8px);
 
 }
-
 
 .profile-photo {
 
@@ -995,7 +851,6 @@ body.light-mode
         saturate(0.95);
 
 }
-
 
 .photo-badge {
 
@@ -1042,7 +897,6 @@ body.light-mode
 
 }
 
-
 .photo-info {
 
     position: absolute;
@@ -1084,14 +938,12 @@ body.light-mode
 
 }
 
-
 .photo-info span:last-child {
 
     color:
         var(--success);
 
 }
-
 
 .photo-orbit {
 
@@ -1112,7 +964,6 @@ body.light-mode
 
 }
 
-
 .orbit-one {
 
     width: 480px;
@@ -1123,7 +974,6 @@ body.light-mode
         orbit 14s linear infinite;
 
 }
-
 
 .orbit-two {
 
@@ -1144,7 +994,6 @@ body.light-mode
 
 }
 
-
 @keyframes orbit {
 
     to {
@@ -1156,11 +1005,6 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   20. SECTION HEADING
-========================================================= */
-
 .section-heading {
 
     max-width: 720px;
@@ -1168,7 +1012,6 @@ body.light-mode
     margin-bottom: 50px;
 
 }
-
 
 .section-heading h2 {
 
@@ -1186,7 +1029,6 @@ body.light-mode
     margin-bottom: 15px;
 
 }
-
 
 .section-heading h2 span {
 
@@ -1209,18 +1051,12 @@ body.light-mode
 
 }
 
-
 .section-heading > p:last-child {
 
     color:
         var(--muted);
 
 }
-
-
-/* =========================================================
-   21. GLASS
-========================================================= */
 
 .glass {
 
@@ -1239,11 +1075,6 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   22. ABOUT
-========================================================= */
-
 .about-grid {
 
     display: grid;
@@ -1254,7 +1085,6 @@ body.light-mode
     gap: 20px;
 
 }
-
 
 .about-card {
 
@@ -1268,7 +1098,6 @@ body.light-mode
         border-color 0.3s ease;
 
 }
-
 
 .about-card:hover {
 
@@ -1284,7 +1113,6 @@ body.light-mode
         );
 
 }
-
 
 .icon-box {
 
@@ -1312,7 +1140,6 @@ body.light-mode
 
 }
 
-
 .about-card h3 {
 
     font-size: 23px;
@@ -1320,7 +1147,6 @@ body.light-mode
     margin-bottom: 13px;
 
 }
-
 
 .about-card p {
 
@@ -1330,7 +1156,6 @@ body.light-mode
     margin-bottom: 15px;
 
 }
-
 
 .career-title {
 
@@ -1345,11 +1170,6 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   23. MINI LIST
-========================================================= */
-
 .mini-list {
 
     display: grid;
@@ -1359,7 +1179,6 @@ body.light-mode
     margin-top: 20px;
 
 }
-
 
 .mini-list div {
 
@@ -1388,7 +1207,6 @@ body.light-mode
 
 }
 
-
 .mini-list div:hover {
 
     background:
@@ -1404,7 +1222,6 @@ body.light-mode
 
 }
 
-
 .mini-list span {
 
     color:
@@ -1413,11 +1230,6 @@ body.light-mode
     font-size: 11px;
 
 }
-
-
-/* =========================================================
-   24. STATS
-========================================================= */
 
 .stats-grid {
 
@@ -1431,7 +1243,6 @@ body.light-mode
     margin-top: 20px;
 
 }
-
 
 .stat-card {
 
@@ -1453,14 +1264,12 @@ body.light-mode
 
 }
 
-
 .stat-card:hover {
 
     transform:
         translateY(-4px);
 
 }
-
 
 .stat-card strong {
 
@@ -1474,7 +1283,6 @@ body.light-mode
         var(--accent);
 
 }
-
 
 .stat-card span {
 
@@ -1491,11 +1299,6 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   25. PROJECT FILTER
-========================================================= */
-
 .project-filter {
 
     display: flex;
@@ -1507,7 +1310,6 @@ body.light-mode
     margin-bottom: 25px;
 
 }
-
 
 .filter-btn {
 
@@ -1535,7 +1337,6 @@ body.light-mode
 
 }
 
-
 .filter-btn.active,
 .filter-btn:hover {
 
@@ -1549,11 +1350,6 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   26. PROJECT GRID
-========================================================= */
-
 .projects-grid {
 
     display: grid;
@@ -1564,11 +1360,6 @@ body.light-mode
     gap: 20px;
 
 }
-
-
-/* =========================================================
-   27. PROJECT CARD
-========================================================= */
 
 .project-card {
 
@@ -1603,7 +1394,6 @@ body.light-mode
 
 }
 
-
 .project-card::before {
 
     content: "";
@@ -1632,7 +1422,6 @@ body.light-mode
 
 }
 
-
 .project-card:hover {
 
     transform:
@@ -1648,17 +1437,11 @@ body.light-mode
 
 }
 
-
 .project-card.hidden {
 
     display: none;
 
 }
-
-
-/* =========================================================
-   28. PROJECT CONTENT
-========================================================= */
 
 .project-number {
 
@@ -1676,7 +1459,6 @@ body.light-mode
     font-weight: 900;
 
 }
-
 
 .project-icon {
 
@@ -1704,7 +1486,6 @@ body.light-mode
 
 }
 
-
 .project-tag {
 
     color:
@@ -1718,7 +1499,6 @@ body.light-mode
 
 }
 
-
 .project-card h3 {
 
     font-size: 23px;
@@ -1728,7 +1508,6 @@ body.light-mode
 
 }
 
-
 .project-card p {
 
     color:
@@ -1737,11 +1516,6 @@ body.light-mode
     font-size: 14px;
 
 }
-
-
-/* =========================================================
-   29. PROJECT TECHNOLOGY
-========================================================= */
 
 .project-tech {
 
@@ -1754,7 +1528,6 @@ body.light-mode
     margin-top: 20px;
 
 }
-
 
 .project-tech span {
 
@@ -1775,11 +1548,6 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   30. PROJECT IMAGE
-========================================================= */
-
 .project-image {
 
     margin-top: 20px;
@@ -1797,7 +1565,6 @@ body.light-mode
 
 }
 
-
 .project-image img {
 
     display: block;
@@ -1813,18 +1580,12 @@ body.light-mode
 
 }
 
-
 .project-image img:hover {
 
     transform:
         scale(1.04);
 
 }
-
-
-/* =========================================================
-   31. PROJECT LINK
-========================================================= */
 
 .project-link {
 
@@ -1849,18 +1610,12 @@ body.light-mode
 
 }
 
-
 .project-link:hover {
 
     color:
         var(--accent);
 
 }
-
-
-/* =========================================================
-   32. SKILLS
-========================================================= */
 
 .skills-grid {
 
@@ -1872,7 +1627,6 @@ body.light-mode
     gap: 20px;
 
 }
-
 
 .skill-card {
 
@@ -1894,7 +1648,6 @@ body.light-mode
 
 }
 
-
 .skill-card:hover {
 
     transform:
@@ -1910,7 +1663,6 @@ body.light-mode
 
 }
 
-
 .skill-top {
 
     display: flex;
@@ -1921,7 +1673,6 @@ body.light-mode
         space-between;
 
 }
-
 
 .skill-icon {
 
@@ -1950,14 +1701,12 @@ body.light-mode
 
 }
 
-
 .skill-top strong {
 
     color:
         var(--accent);
 
 }
-
 
 .skill-card h3 {
 
@@ -1968,7 +1717,6 @@ body.light-mode
 
 }
 
-
 .skill-card p {
 
     color:
@@ -1977,11 +1725,6 @@ body.light-mode
     font-size: 13px;
 
 }
-
-
-/* =========================================================
-   33. SKILL PROGRESS
-========================================================= */
 
 .progress {
 
@@ -1997,7 +1740,6 @@ body.light-mode
         var(--bg-soft);
 
 }
-
 
 .progress span {
 
@@ -2028,11 +1770,6 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   34. PROCESS
-========================================================= */
-
 .process-grid {
 
     display: grid;
@@ -2043,7 +1780,6 @@ body.light-mode
     gap: 15px;
 
 }
-
 
 .process-card {
 
@@ -2064,7 +1800,6 @@ body.light-mode
 
 }
 
-
 .process-card:hover {
 
     transform:
@@ -2080,7 +1815,6 @@ body.light-mode
 
 }
 
-
 .process-card > span {
 
     color:
@@ -2092,7 +1826,6 @@ body.light-mode
 
 }
 
-
 .process-card h3 {
 
     margin:
@@ -2102,7 +1835,6 @@ body.light-mode
 
 }
 
-
 .process-card p {
 
     color:
@@ -2111,11 +1843,6 @@ body.light-mode
     font-size: 13px;
 
 }
-
-
-/* =========================================================
-   35. CONTACT
-========================================================= */
 
 .contact-grid {
 
@@ -2130,7 +1857,6 @@ body.light-mode
 
 }
 
-
 .contact-info {
 
     display: grid;
@@ -2138,7 +1864,6 @@ body.light-mode
     gap: 12px;
 
 }
-
 
 .contact-item {
 
@@ -2161,7 +1886,6 @@ body.light-mode
 
 }
 
-
 .contact-item:hover {
 
     transform:
@@ -2176,7 +1900,6 @@ body.light-mode
         );
 
 }
-
 
 .contact-icon {
 
@@ -2202,7 +1925,6 @@ body.light-mode
 
 }
 
-
 .contact-item small {
 
     display: block;
@@ -2218,7 +1940,6 @@ body.light-mode
 
 }
 
-
 .contact-item strong {
 
     display: block;
@@ -2229,18 +1950,12 @@ body.light-mode
 
 }
 
-
 .contact-item > span {
 
     color:
         var(--muted);
 
 }
-
-
-/* =========================================================
-   36. CONTACT FORM
-========================================================= */
 
 .contact-form {
 
@@ -2251,7 +1966,6 @@ body.light-mode
 
 }
 
-
 .contact-form h3 {
 
     font-size: 24px;
@@ -2259,7 +1973,6 @@ body.light-mode
     margin-bottom: 5px;
 
 }
-
 
 .contact-form > p {
 
@@ -2271,7 +1984,6 @@ body.light-mode
     margin-bottom: 23px;
 
 }
-
 
 .contact-form label {
 
@@ -2288,7 +2000,6 @@ body.light-mode
 
 }
 
-
 .form-row {
 
     display: grid;
@@ -2299,7 +2010,6 @@ body.light-mode
     gap: 12px;
 
 }
-
 
 .contact-form input,
 .contact-form textarea {
@@ -2333,7 +2043,6 @@ body.light-mode
 
 }
 
-
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
 
@@ -2343,7 +2052,6 @@ body.light-mode
     opacity: 0.7;
 
 }
-
 
 .contact-form input:focus,
 .contact-form textarea:focus {
@@ -2362,17 +2070,11 @@ body.light-mode
 
 }
 
-
 .full-btn {
 
     width: 100%;
 
 }
-
-
-/* =========================================================
-   37. FOOTER
-========================================================= */
 
 .footer {
 
@@ -2384,7 +2086,6 @@ body.light-mode
         var(--line);
 
 }
-
 
 .footer-inner {
 
@@ -2399,7 +2100,6 @@ body.light-mode
 
 }
 
-
 .footer p {
 
     color:
@@ -2408,11 +2108,6 @@ body.light-mode
     font-size: 12px;
 
 }
-
-
-/* =========================================================
-   38. BACK TO TOP
-========================================================= */
 
 .back-top {
 
@@ -2454,7 +2149,6 @@ body.light-mode
 
 }
 
-
 .back-top.show {
 
     opacity: 1;
@@ -2465,7 +2159,6 @@ body.light-mode
         translateY(0);
 
 }
-
 
 .back-top:hover {
 
@@ -2478,11 +2171,6 @@ body.light-mode
         var(--accent);
 
 }
-
-
-/* =========================================================
-   39. TOAST
-========================================================= */
 
 .toast {
 
@@ -2526,7 +2214,6 @@ body.light-mode
 
 }
 
-
 .toast.show {
 
     transform:
@@ -2535,11 +2222,6 @@ body.light-mode
     opacity: 1;
 
 }
-
-
-/* =========================================================
-   40. SCROLL REVEAL
-========================================================= */
 
 .reveal {
 
@@ -2554,7 +2236,6 @@ body.light-mode
 
 }
 
-
 .reveal.active {
 
     opacity: 1;
@@ -2564,17 +2245,11 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   41. SCROLLBAR
-========================================================= */
-
 ::-webkit-scrollbar {
 
     width: 9px;
 
 }
-
 
 ::-webkit-scrollbar-track {
 
@@ -2582,7 +2257,6 @@ body.light-mode
         var(--bg);
 
 }
-
 
 ::-webkit-scrollbar-thumb {
 
@@ -2596,11 +2270,6 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   42. TABLET
-========================================================= */
-
 @media (max-width: 1000px) {
 
     .desktop-nav {
@@ -2609,13 +2278,11 @@ body.light-mode
 
     }
 
-
     .menu-btn {
 
         display: grid;
 
     }
-
 
     .mobile-nav {
 
@@ -2661,7 +2328,6 @@ body.light-mode
 
     }
 
-
     .mobile-nav.open {
 
         transform:
@@ -2672,7 +2338,6 @@ body.light-mode
         visibility: visible;
 
     }
-
 
     .mobile-link {
 
@@ -2694,7 +2359,6 @@ body.light-mode
 
     }
 
-
     .mobile-link:hover {
 
         color:
@@ -2710,7 +2374,6 @@ body.light-mode
 
     }
 
-
     .hero-grid {
 
         grid-template-columns:
@@ -2720,20 +2383,17 @@ body.light-mode
 
     }
 
-
     .hero-content {
 
         text-align: center;
 
     }
 
-
     .hero-description {
 
         margin-inline: auto;
 
     }
-
 
     .hero-buttons,
     .quick-links {
@@ -2743,13 +2403,11 @@ body.light-mode
 
     }
 
-
     .hero-photo-wrap {
 
         min-height: 520px;
 
     }
-
 
     .projects-grid,
     .skills-grid {
@@ -2758,7 +2416,6 @@ body.light-mode
             1fr 1fr;
 
     }
-
 
     .process-grid {
 
@@ -2769,11 +2426,6 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   43. MOBILE
-========================================================= */
-
 @media (max-width: 700px) {
 
     :root {
@@ -2781,7 +2433,6 @@ body.light-mode
         --header: 68px;
 
     }
-
 
     .container {
 
@@ -2793,7 +2444,6 @@ body.light-mode
 
     }
 
-
     .section {
 
         padding:
@@ -2801,14 +2451,12 @@ body.light-mode
 
     }
 
-
     .hero {
 
         padding-top:
             115px;
 
     }
-
 
     .hero h1 {
 
@@ -2824,13 +2472,11 @@ body.light-mode
 
     }
 
-
     .typing-line {
 
         font-size: 16px;
 
     }
-
 
     .hero-description {
 
@@ -2838,14 +2484,12 @@ body.light-mode
 
     }
 
-
     .hero-photo-wrap {
 
         min-height:
             440px;
 
     }
-
 
     .photo-card {
 
@@ -2857,14 +2501,12 @@ body.light-mode
 
     }
 
-
     .profile-photo {
 
         height:
             420px;
 
     }
-
 
     .orbit-one {
 
@@ -2874,7 +2516,6 @@ body.light-mode
 
     }
 
-
     .orbit-two {
 
         width: 450px;
@@ -2882,7 +2523,6 @@ body.light-mode
         height: 450px;
 
     }
-
 
     .about-grid,
     .projects-grid,
@@ -2894,14 +2534,12 @@ body.light-mode
 
     }
 
-
     .stats-grid {
 
         grid-template-columns:
             1fr;
 
     }
-
 
     .process-grid {
 
@@ -2910,14 +2548,12 @@ body.light-mode
 
     }
 
-
     .form-row {
 
         grid-template-columns:
             1fr;
 
     }
-
 
     .footer-inner {
 
@@ -2929,7 +2565,6 @@ body.light-mode
 
     }
 
-
     .section-heading h2 {
 
         font-size:
@@ -2939,11 +2574,6 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   44. SMALL MOBILE
-========================================================= */
-
 @media (max-width: 430px) {
 
     .hero-buttons .btn {
@@ -2952,14 +2582,12 @@ body.light-mode
 
     }
 
-
     .process-grid {
 
         grid-template-columns:
             1fr;
 
     }
-
 
     .photo-info {
 
@@ -2969,7 +2597,6 @@ body.light-mode
         gap: 2px;
 
     }
-
 
     .about-card,
     .project-card,
@@ -2981,14 +2608,12 @@ body.light-mode
 
     }
 
-
     .project-card {
 
         min-height:
             470px;
 
     }
-
 
     .contact-item strong {
 
@@ -2999,11 +2624,6 @@ body.light-mode
 
 }
 
-
-/* =========================================================
-   45. REDUCED MOTION
-========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
 
     html {
@@ -3012,7 +2632,6 @@ body.light-mode
             auto;
 
     }
-
 
     *,
     *::before,
@@ -3029,7 +2648,6 @@ body.light-mode
 
     }
 
-
     .reveal {
 
         opacity: 1;
@@ -3038,15 +2656,7 @@ body.light-mode
 
     }
 
-
 }
-
-
-
-
-/* =========================================================
-   46. PROJECT IMAGE — FULL IMAGE / NO CROPPING
-========================================================= */
 
 .project-card {
     min-width: 0;
@@ -3114,10 +2724,6 @@ body.light-mode
     transform: translate(2px, -2px);
 }
 
-/* =========================================================
-   47. PROJECT IMAGE — MOBILE
-========================================================= */
-
 @media (max-width: 700px) {
     .project-image {
         height: 190px;
@@ -3129,17 +2735,6 @@ body.light-mode
         height: 180px;
     }
 }
-
-
-/* =========================================================
-   47. PROJECT DISPLAY FIX — FINAL
-   ---------------------------------------------------------
-   Tujuan:
-   - Preview gambar selalu memiliki ruang yang jelas.
-   - Gambar tidak dipotong secara vertikal.
-   - GitHub dan CodePen berdampingan.
-   - Kartu tidak membuat link mengambil tinggi aneh.
-========================================================= */
 
 .projects-grid {
     align-items: stretch;
@@ -3284,7 +2879,6 @@ body.light-mode
     opacity: 0.25;
 }
 
-/* Jangan membuat kartu kosong ketika gambar gagal dimuat. */
 .project-image:has(.image-error)::after {
     content: "Preview tidak dapat dimuat";
     position: absolute;
@@ -3297,10 +2891,6 @@ body.light-mode
 .project-image:has(.image-error) img {
     opacity: 0;
 }
-
-/* =========================================================
-   48. PROJECT RESPONSIVE FIX
-========================================================= */
 
 @media (max-width: 1000px) {
 
@@ -3350,10 +2940,6 @@ body.light-mode
 
 }
 
-/* =========================================================
-   49. SAFE INTERACTION
-========================================================= */
-
 @media (hover: none), (pointer: coarse) {
 
     .project-card:hover {
@@ -3370,10 +2956,6 @@ body.light-mode
 
 }
 
-/* =========================================================
-   50. FOCUS ACCESSIBILITY
-========================================================= */
-
 .project-action:focus-visible,
 .quick-links a:focus-visible,
 .nav-link:focus-visible,
@@ -3382,12 +2964,6 @@ body.light-mode
     outline: 3px solid rgba(96, 165, 250, 0.45);
     outline-offset: 3px;
 }
-
-
-
-/* =========================================================
-   51. JAVASCRIPT CARD TILT VARIABLES
-========================================================= */
 
 .project-card {
     --card-rotate-x: 0deg;
@@ -3416,15 +2992,6 @@ body.light-mode
     }
 
 }
-
-/* =========================================================
-   52. FINAL PROJECT CARD FIX — MERGED
-   ---------------------------------------------------------
-   - Preview gambar selalu terlihat penuh
-   - Tidak crop / tidak tenggelam
-   - GitHub + CodePen tetap berdampingan
-   - Responsive desktop / tablet / mobile
-========================================================= */
 
 .projects-grid {
     display: grid;
