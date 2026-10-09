@@ -1,57 +1,52 @@
 :root {
-
-    --bg: #070b16;
-
-    --bg-soft: #0d1424;
-
-    --card: rgba(15, 23, 42, 0.78);
-
-    --card-solid: #101827;
-
-    --text: #f5f7fb;
-
-    --muted: #9aa8bd;
-
-    --line: rgba(148, 163, 184, 0.16);
-
-    --accent: #60a5fa;
-
-    --accent-2: #a78bfa;
-
-    --accent-3: #22d3ee;
-
-    --success: #86efac;
-
-    --shadow:
-        0 25px 80px rgba(0, 0, 0, 0.35);
-
+    --bg: #191714;
+    --bg-soft: #25211c;
+    --card: rgba(40, 35, 29, 0.90);
+    --card-solid: #28231e;
+    --text: #f5eee3;
+    --muted: #b4a796;
+    --line: rgba(232, 215, 190, 0.14);
+    --accent: #e49a70;
+    --accent-2: #c4a477;
+    --accent-3: #efd092;
+    --success: #a6c69b;
+    --shadow: 0 25px 80px rgba(0, 0, 0, 0.28);
     --radius: 24px;
-
     --container: 1160px;
-
     --header: 76px;
-
+    --header-bg: rgba(25, 23, 20, 0.90);
 }
 
 body.light-mode {
+    --bg: #f8f3e9;
+    --bg-soft: #eee6d8;
+    --card: rgba(255, 252, 245, 0.88);
+    --card-solid: #fffdf8;
+    --text: #29251f;
+    --muted: #817668;
+    --line: rgba(75, 61, 43, 0.15);
+    --accent: #bd6844;
+    --accent-2: #927451;
+    --accent-3: #d4a95e;
+    --success: #62836b;
+    --shadow: 0 25px 70px rgba(83, 62, 38, 0.10);
+    --header-bg: rgba(248, 243, 233, 0.92);
+}
 
-    --bg: #f4f7fb;
-
-    --bg-soft: #eaf0f8;
-
-    --card: rgba(255, 255, 255, 0.82);
-
-    --card-solid: #ffffff;
-
-    --text: #111827;
-
-    --muted: #5d6b7e;
-
-    --line: rgba(15, 23, 42, 0.12);
-
-    --shadow:
-        0 25px 70px rgba(15, 23, 42, 0.12);
-
+body:not(.light-mode) {
+    --bg: #191714;
+    --bg-soft: #25211c;
+    --card: rgba(40, 35, 29, 0.90);
+    --card-solid: #28231e;
+    --text: #f5eee3;
+    --muted: #b4a796;
+    --line: rgba(232, 215, 190, 0.14);
+    --accent: #e49a70;
+    --accent-2: #c4a477;
+    --accent-3: #efd092;
+    --success: #a6c69b;
+    --shadow: 0 25px 80px rgba(0, 0, 0, 0.28);
+    --header-bg: rgba(25, 23, 20, 0.90);
 }
 
 * {
@@ -1140,6 +1135,13 @@ body.light-mode
 
 }
 
+.icon-box img{
+    width: 24px;
+    
+    height: 24px;
+    
+    object-fit: contain;
+}
 .about-card h3 {
 
     font-size: 23px;
@@ -1484,6 +1486,14 @@ body.light-mode
 
     margin-bottom: 25px;
 
+}
+
+.project-icon img{
+    width: 24px;
+
+    height: 24px;
+
+    object-fit: contain;
 }
 
 .project-tag {
@@ -1863,7 +1873,10 @@ body.light-mode
 
     gap: 12px;
 
+  
+
 }
+
 
 .contact-item {
 
@@ -1884,9 +1897,12 @@ body.light-mode
         transform 0.25s ease,
         border-color 0.25s ease;
 
+
 }
 
 .contact-item:hover {
+    
+   
 
     transform:
         translateX(5px);
@@ -1923,6 +1939,12 @@ body.light-mode
 
     font-size: 20px;
 
+}
+
+.contact-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 .contact-item small {
@@ -2002,6 +2024,7 @@ body.light-mode
 
 .form-row {
 
+    
     display: grid;
 
     grid-template-columns:
@@ -3245,3 +3268,4 @@ body.light-mode
         transition: none !important;
     }
 }
+
