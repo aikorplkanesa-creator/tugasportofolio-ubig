@@ -392,6 +392,12 @@ body.light-mode
 
 }
 
+.nav-actions img{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
 .theme-btn,
 .menu-btn {
 
@@ -515,6 +521,10 @@ body.light-mode
 
 }
 
+
+
+
+
 .eyebrow {
 
     color:
@@ -528,7 +538,11 @@ body.light-mode
 
     margin-bottom: 14px;
 
+    
+
 }
+
+
 
 .hero h1 {
 
@@ -1315,6 +1329,8 @@ body.light-mode
 
 .filter-btn {
 
+    transition: 0.3s ease;
+
     padding:
         9px 15px;
 
@@ -1336,6 +1352,14 @@ body.light-mode
 
     transition:
         0.2s ease;
+
+}
+
+.filter-btn:hover{
+
+    cursor: pointer ;
+
+    transform: translateY(-5px);
 
 }
 
@@ -1636,11 +1660,14 @@ body.light-mode
 
     gap: 20px;
 
+
 }
 
 .skill-card {
 
     padding: 27px;
+
+
 
     border:
         1px solid
@@ -1659,6 +1686,10 @@ body.light-mode
 }
 
 .skill-card:hover {
+
+    transform: translateY(-5px);
+
+    cursor: pointer;
 
     transform:
         translateY(-5px);
@@ -1682,7 +1713,11 @@ body.light-mode
     justify-content:
         space-between;
 
+
 }
+
+
+
 
 .skill-icon {
 
@@ -1711,6 +1746,11 @@ body.light-mode
 
 }
 
+.skill-icon img{
+    width: 35px;
+    height: 30px;
+    object-fit: contain;
+}
 .skill-top strong {
 
     color:
@@ -1919,6 +1959,8 @@ body.light-mode
 
 .contact-icon {
 
+
+
     width: 48px;
 
     height: 48px;
@@ -1940,6 +1982,7 @@ body.light-mode
     font-size: 20px;
 
 }
+
 
 .contact-icon img {
     width: 24px;
@@ -2236,6 +2279,8 @@ body.light-mode
         0.35s ease;
 
 }
+
+
 
 .toast.show {
 
@@ -3267,5 +3312,141 @@ body.light-mode
     .project-action {
         transition: none !important;
     }
+}
+
+.text-bergerak{
+    width: 200%;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.bergerak{
+    display: inline-block;
+    padding-left: 100%;
+    animation:jalan-kiri 5s linear infinite;
+    font-size: 20px;
+    
+}
+
+@keyframes jalan-kiri{
+    0%{transform: translate3d(0, 0, 0);}
+
+    100%{transform: translate3d(-100%, 0, 0);}
+}
+
+.text-berjalan{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+
+}
+
+.berjalan{
+    animation: jalan 5s ease-in-out infinite;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    white-space: nowrap;
+
+}
+
+@keyframes jalan{
+
+    0%{transform: translateX(0px);}
+
+    50%{transform: translateX(30px);}
+
+    100%{transform: translateX(0px);}
+
+}
+
+.gambar img{
+    width: 30px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.grk-1{
+    width:100%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.grk{
+    text-align: center;
+    display: inline-block;
+    animation: jalannih 3s ease-in-out infinite;
+    white-space: nowrap;
+
+}
+
+@keyframes jalannih {
+
+    0%{transform: translateX(0px);}
+
+    50%{transform: translateX(30px);}
+
+    100%{transform: translateX(0px);}
+}
+
+.ya-ndak-tau{
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.tanya-kok-tanya-saya{
+    text-align: center;
+    display: block;
+    white-space: nowrap;
+    animation: ytta 3s ease-in-out infinite;
+
+}
+
+@keyframes ytta{
+
+    0%{transform: translateX(0px);}
+
+    50%{transform: translateX(30px);}
+
+    100%{transform: translateX(0px);}
+}
+
+.bagaimana-1{
+    width: 100%;
+    white-space: nowrap;
+    overflow:hidden;
+    text-align: center;
+
+}
+
+.bagaimana-ya{
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    animation: disini 3s ease-in-out infinite;
+
+}
+
+@keyframes disini{
+    0%{transform: trasnlateX(0px);}
+
+    50%{transform: translateX(30px);}
+
+    100%{transform: translateX(0px);}
+
+}
+
+.hmm{
+    font-weight: bold;
+    text-decoration: #29251f;
+    font-family: 'Times New Roman', Times, serif;
 }
 

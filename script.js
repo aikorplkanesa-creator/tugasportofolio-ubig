@@ -381,50 +381,26 @@ document.addEventListener(
 
         }
 
-        function updateThemeButton() {
+function updateThemeButton() {
+    if (!themeBtn) {
+        return;
+    }
 
-            if (!themeBtn) {
-                return;
-            }
+    const isLight = document.body.classList.contains("light-mode");
 
-            const isLight =
-                document.body.classList.contains(
-                    "light-mode"
-                );
+    if (isLight) {
+        themeBtn.innerHTML = '<img src="moon.png" class="theme-icon" alt="">';
 
-            if (isLight) {
+        themeBtn.setAttribute("aria-label", "Aktifkan mode gelap");
+        themeBtn.setAttribute("title", "Mode gelap");
 
-                themeBtn.textContent =
-                    "🌙";
+    } else {
+        themeBtn.innerHTML = '<img src="sun.png" class="theme-icon" alt="">';
 
-                themeBtn.setAttribute(
-                    "aria-label",
-                    "Aktifkan mode gelap"
-                );
-
-                themeBtn.setAttribute(
-                    "title",
-                    "Mode gelap"
-                );
-
-            } else {
-
-                themeBtn.textContent =
-                    "☀️";
-
-                themeBtn.setAttribute(
-                    "aria-label",
-                    "Aktifkan mode terang"
-                );
-
-                themeBtn.setAttribute(
-                    "title",
-                    "Mode terang"
-                );
-
-            }
-
-        }
+        themeBtn.setAttribute("aria-label", "Aktifkan mode terang");
+        themeBtn.setAttribute("title", "Mode terang");
+    }
+}
 
         const savedTheme =
             getSavedTheme();
