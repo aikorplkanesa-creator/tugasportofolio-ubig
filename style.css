@@ -321,8 +321,32 @@ body.light-mode
 
     font-weight: 900;
 
+    padding-left: 15px;
+
     letter-spacing: -1px;
 
+    white-space: nowrap;
+
+    overflow: hidden;
+
+}
+
+.aku-2{
+    animation: ppp 4s ease-in-out infinite;
+
+    display: block;
+
+    white-space: nowrap;
+
+}
+
+@keyframes ppp {
+    
+    0%{transform: translateX(0px);}
+
+    50%{transform: translateX(20px);}
+
+    100%{transform: translateX(0px);}
 }
 
 .logo span {
@@ -1660,6 +1684,14 @@ body.light-mode
 
     gap: 20px;
 
+    transition: 0.3s ease;
+
+}
+
+.skill-grid:hover{
+    transform: translateY(-5px);
+
+    cursor: pointer;
 
 }
 
@@ -1682,6 +1714,8 @@ body.light-mode
     transition:
         transform 0.3s ease,
         border-color 0.3s ease;
+
+    transition: 0.3s ease;
 
 }
 
@@ -1713,6 +1747,14 @@ body.light-mode
     justify-content:
         space-between;
 
+        transition: 0.3s ease ;
+
+}
+
+.skill-top:hover{
+    transform: translateY(-5px);
+
+    cursor: pointer;
 
 }
 
@@ -1744,7 +1786,10 @@ body.light-mode
 
     font-weight: 900;
 
+
 }
+
+
 
 .skill-icon img{
     width: 35px;
@@ -3420,28 +3465,25 @@ body.light-mode
 }
 
 .bagaimana-1{
-    width: 100%;
-    white-space: nowrap;
-    overflow:hidden;
-    text-align: center;
+    width: 200%;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap
 
 }
 
 .bagaimana-ya{
-    display: block;
-    text-align: center;
-    white-space: nowrap;
-    animation: disini 3s ease-in-out infinite;
+    display: inline-block;
+    font-size: 20px;
+    animation: kiri 4s linear infinite;
+    padding-left: 100%;
 
 }
 
-@keyframes disini{
-    0%{transform: trasnlateX(0px);}
+@keyframes kiri{
+    0%{transform: translate3d(0, 0, 0);}
 
-    50%{transform: translateX(30px);}
-
-    100%{transform: translateX(0px);}
-
+    100%{transform: translate3d(-100%, 0, 0);}
 }
 
 .hmm{
@@ -3449,4 +3491,45 @@ body.light-mode
     text-decoration: #29251f;
     font-family: 'Times New Roman', Times, serif;
 }
+
+.aku{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.oh{
+    display: block;
+    white-space: nowrap;
+    animation: ohya 3s ease-in-out infinite
+
+}
+
+@keyframes ohya{
+
+    0%{transform: translateX(0px);}
+
+    50%{transform: translateX(10px);}
+
+    100%{transform: translateX(0px);}
+}
+
+.aku{
+    font-weight: bold;
+
+    font-style: italic;
+}
+
+.ku{
+    font-weight: bold;
+
+    font-style: italic;
+}
+
+
+
+
+
+
 
