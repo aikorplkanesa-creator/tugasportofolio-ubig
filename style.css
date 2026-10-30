@@ -3528,6 +3528,288 @@ body.light-mode
 }
 
 
+/* ========================================
+   AIKO.DEV - MOBILE RESPONSIVE FIX
+======================================== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: min(1160px, calc(100% - 40px));
+    margin-inline: auto;
+}
+
+.about-grid,
+.projects-grid,
+.skills-grid,
+.contact-grid,
+.hero-grid,
+.process-grid {
+    min-width: 0;
+}
+
+.about-card,
+.project-card,
+.skill-card,
+.process-card,
+.contact-form,
+.contact-info {
+    width: 100%;
+    min-width: 0;
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .projects-grid,
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SMARTPHONE */
+@media (max-width: 700px) {
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    .container {
+        width: calc(100% - 30px);
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .navbar {
+        height: 68px;
+        gap: 10px;
+    }
+
+    .logo {
+        padding-left: 0;
+        font-size: 20px;
+    }
+
+    .nav-actions {
+        gap: 8px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 110px;
+        padding-bottom: 40px;
+    }
+
+    .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 11vw, 58px);
+        letter-spacing: -2px;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons,
+    .quick-links {
+        justify-content: center;
+    }
+
+    .hero-photo-wrap {
+        min-height: 400px;
+        overflow: hidden;
+    }
+
+    .photo-card {
+        width: min(310px, 88%);
+    }
+
+    .profile-photo {
+        width: 100%;
+        height: 390px;
+    }
+
+    .orbit-one {
+        width: 340px;
+        height: 340px;
+    }
+
+    .orbit-two {
+        width: 390px;
+        height: 390px;
+    }
+
+    .about-grid,
+    .projects-grid,
+    .skills-grid,
+    .contact-grid,
+    .process-grid,
+    .stats-grid {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+    }
+
+    .about-card,
+    .project-card,
+    .skill-card,
+    .process-card,
+    .contact-form {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .about-card h3 {
+        font-size: 21px;
+    }
+
+    .about-card p {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .project-card {
+        min-height: auto;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+        letter-spacing: -1px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .back-top {
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+/* SMALL SMARTPHONE */
+@media (max-width: 430px) {
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .about-card,
+    .project-card,
+    .skill-card,
+    .process-card,
+    .contact-form {
+        padding: 19px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-photo-wrap {
+        min-height: 360px;
+    }
+
+    .profile-photo {
+        height: 350px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-item {
+        grid-template-columns: 42px minmax(0, 1fr) 16px;
+        gap: 9px;
+        padding: 12px;
+    }
+
+    .contact-item strong {
+        overflow-wrap: anywhere;
+    }
+
+    .mobile-nav {
+        left: 12px;
+        right: 12px;
+    }
+}
+
+/* EXTRA SMALL SCREEN */
+@media (max-width: 360px) {
+    .logo {
+        font-size: 17px;
+    }
+
+    .theme-btn,
+    .menu-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .about-card,
+    .project-card,
+    .skill-card {
+        padding: 16px;
+    }
+}
+
 
 
 
